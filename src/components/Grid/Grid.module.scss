@@ -1,0 +1,20 @@
+.gridContainer {
+  display: grid;
+  --rows: 1;
+  --columns: 1;
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-gap: 1px;
+  --collapsedMarginLeft: 70px;
+  --expandedMarginLeft: 190px;
+  margin-left: var(--collapsedMarginLeft);
+  width: calc(100vw - var(--collapsedMarginLeft));
+  height: 100vh;
+  transition: width 0.3s, margin-left 0.3s;
+  background-color: #E0CCD8 !important;
+}
+
+.expanded {
+  margin-left: var(--expandedMarginLeft);
+  width: calc(100vw - var(--expandedMarginLeft));
+}
